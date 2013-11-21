@@ -22,7 +22,6 @@ while finished == 0:
     if count == 8:
         finished = 1
     else:
-        print "still goin"
         continue
 
 print board
