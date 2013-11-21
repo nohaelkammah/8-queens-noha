@@ -1,18 +1,25 @@
-//
-//  main.cpp
-//  search
-//
-//  Created by Noha Mohamed on 11/9/13.
-//  Copyright (c) 2013 Noha Mohamed. All rights reserved.
-//
+#include <iostream>;
+using namespace std;
+#include "node.h";
+#include <string>;
 
-#include <iostream>
 
-int main(int argc, const char * argv[])
+node depthfirst(int problem, node start);
+int main()
 {
+    
+    //[m1,c1,m2,c2,b12]
+    
+    int list[] = {3,3,0,0,1};
+    breadth_f(list);
+    
+ }
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+void breadth_f(int prob[]){
+    int solution[] = {0,0,3,3,2};
+    
+    if(prob[4] == 1){
+        if prob[0] =
+    }
+
 }
-
