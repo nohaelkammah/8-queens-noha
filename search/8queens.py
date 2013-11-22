@@ -10,7 +10,7 @@ while finished == 0:
 
     board = [[0 for x in xrange(8)] for x in xrange(8)] #matrix
     for i in range (0,8,1):
-        r = random.randrange(0,7)
+        r = random.randrange(0,8)
         board[r][col[i]]= 'Q'
         
     count = 0 # count the queens in case there are repetitions
@@ -25,9 +25,14 @@ while finished == 0:
         continue
 
 boardn = np.array([board[0],board[1],board[2],board[3],board[4],board[5],board[6],board[7]])
-
-
 print boardn
 
 
 #hill climbing
+loc = []
+for c in range (0,8,1):
+    for r in range (0,8,1):
+        if board[r][c]== 'Q':
+            loc = [r,c]
+            break
+print loc
