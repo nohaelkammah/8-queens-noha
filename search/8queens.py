@@ -24,9 +24,9 @@ while finished == 0:
     else:
         continue
 
-#np.concatenate(boardn,board[0])
-                
+boardn = np.array([board[0],board[1],board[2],board[3],board[4],board[5],board[6],board[7]])
+
+
 print boardn
-print board
 
 
