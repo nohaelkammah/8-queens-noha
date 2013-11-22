@@ -31,11 +31,21 @@ print boardn
 #hill climbing
 loc = []
 c = 0
-for c in range (0,8,1):
-    for r in range (0,8,1):
-        if board[r][c]== 'Q':
-            loc = [r,c]
-            print loc
+for r in range (0,8,1):
+    if board[r][c]== 'Q':
+        loc = [r,c]
 
-print loc
+if c == 0:
+    rown = loc[0]
     x = loc[1] +1
+    for i in range(0,8,1):
+        if board[i][x] == 'Q':
+            if i == rown:
+                print 'oppa collision 3al yemeen'
+            elif i == rown+1:
+                print 'oppa collision diag ta7t'
+            elif i == rown-1:
+                print 'oppa collision diag fo2'
+
+
+    
