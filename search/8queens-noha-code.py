@@ -50,36 +50,36 @@ while c != 8:
         if c == 0:
             if board[r][cp1] == 'Q':
                 if r == rown:
-                    print 'oppa collision yemeen of queen in column',cp1
+                    print 'oppa collision yemeen of queen in column',c
                 elif r == rown+1:
-                    print 'oppa collision diag ta7t of queen in column',cp1
+                    print 'oppa collision diag ta7t yemeen of queen in column',c
                 elif r == rown-1:
-                    print 'oppa collision diag fo2 of queen in column',cp1
+                    print 'oppa collision diag fo2 yemeen of queen in column',c
         
         elif c ==7:
             if board[r][cm1] == 'Q':
                 if r == rown:
-                    print 'oppa collision shemal of queen in column',cm1
+                    print 'oppa collision shemal of queen in column',c
                 elif r == rown+1:
-                    print 'oppa collision diag ta7t of queen in column',cm1
+                    print 'oppa collision diag ta7t shemal of queen in column',c
                 elif r == rown-1:
-                    print 'oppa collision diag fo2 of queen in column',cm1
+                    print 'oppa collision diag fo2 shemal of queen in column',c
                     
         elif c>0 or c<7:
             if board[r][cm1] == 'Q':
                 if r == rown:
-                    print 'oppa collision shemal of queen in column',cm1
+                    print 'oppa collision shemal of queen in column',c
                 elif r == rown+1:
-                    print 'oppa collision diag ta7t of queen in column',cm1
+                    print 'oppa collision diag ta7t shemal of queen in column',c
                 elif r == rown-1:
-                    print 'oppa collision diag fo2 of queen in column',cm1
-            elif board[r][cp1] == 'Q':
+                    print 'oppa collision diag fo2 shemal of queen in column',c
+            elif board[r][cp1] == 'Q': 
                 if r == rown:
-                    print 'oppa collision yemeen of queen in column',cp1
+                    print 'oppa collision yemeen of queen in column',c
                 elif r == rown+1:
-                    print 'oppa collision diag ta7t of queen in column',cm1
+                    print 'oppa collision diag ta7t yemeen of queen in column',c
                 elif r == rown-1:
-                    print 'oppa collision diag fo2 of queen in column',cm1
+                    print 'oppa collision diag fo2 yemeen of queen in column',c
                 
             
     c = c+1 
