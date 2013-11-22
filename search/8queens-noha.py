@@ -1,8 +1,9 @@
 import random
-import numpy as np
+import numpy
 
 finished = 0
 #place queens
+boardn = numpy.zeros(shape=(8,8))
 
 while finished == 0:
     col = [0,1,2,3,4,5,6,7]
@@ -24,9 +25,6 @@ while finished == 0:
     else:
         continue
 
-#np.concatenate(boardn,board[0])
-                
-print boardn
-print board
 
+print board
 
