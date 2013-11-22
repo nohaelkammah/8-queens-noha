@@ -30,9 +30,11 @@ print boardn
 
 #hill climbing
 loc = []
+c = 0
 for c in range (0,8,1):
     for r in range (0,8,1):
         if board[r][c]== 'Q':
             loc = [r,c]
-            break
+            print loc
+
 print loc
