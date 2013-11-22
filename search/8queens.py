@@ -38,3 +38,4 @@ for c in range (0,8,1):
             print loc
 
 print loc
+    x = loc[1] +1
