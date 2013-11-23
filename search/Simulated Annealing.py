@@ -140,15 +140,10 @@ def getH(boardn):
         c = c+1
     return h
 
-def tempdec(temp):
-    return temp
 
 
-def annealing():
-    temp =15
-    temp = threading.Timer(1, tempdec,temp-1)
-    temp.start()
-    while temp!= 0:
+def annealing(times):
+    while times!= 0:
         boardn,board = makeboard()
         print boardn
         boardn = fixallcollisions(boardn,board)
@@ -157,6 +152,7 @@ def annealing():
         h = 0
         h = getH(boardn)
         print 'heuristic = ',h
+        times = times -1
 
-annealing()
-
+times = 10
+annealing(times)
