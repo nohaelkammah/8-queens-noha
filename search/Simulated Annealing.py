@@ -1,5 +1,7 @@
 import random
 import numpy as np
+import threading
+import thread
 
 def makeboard():
     finished = 0
@@ -143,10 +145,10 @@ def tempdec(temp):
 
 
 def annealing():
-    temp ==100
+    temp =15
+    temp = threading.Timer(1, tempdec,temp-1)
+    temp.start()
     while temp!= 0:
-        temp = Timer(1, tempdec(temp-1))
-        temp.start()
         boardn,board = makeboard()
         print boardn
         boardn = fixallcollisions(boardn,board)
@@ -155,7 +157,6 @@ def annealing():
         h = 0
         h = getH(boardn)
         print 'heuristic = ',h
-        t = t-1
 
 annealing()
 
