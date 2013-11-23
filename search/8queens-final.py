@@ -24,19 +24,14 @@ def makeboard():
             finished = 1
         else:
             continue
-    return board
+    boardn = np.array([board[0],board[1],board[2],board[3],board[4],board[5],board[6],board[7]])
+    return boardn,board
 
-board = makeboard()
 
 
-boardn = np.array([board[0],board[1],board[2],board[3],board[4],board[5],board[6],board[7]])
-boardf= np.array([board[0],board[1],board[2],board[3],board[4],board[5],board[6],board[7]])
-
-print boardn
-
-def fixallcollisions(c):
+def fixallcollisions(boardn,board):
     loc = []
-
+    c = 0
     while c != 8:
 
         for r in range (0,8,1):
@@ -103,11 +98,6 @@ def fixallcollisions(c):
         c = c+1
     return boardn
 
-#hill climbing
-c = 0
-boardn = fixallcollisions(c)
-print "after:"
-print boardn
 
 def getH(boardn):
     h = 0
@@ -148,6 +138,18 @@ def getH(boardn):
         c = c+1
     return h
 
-h = 0
-h = getH(boardn)
-print 'heuristic = ',h
+def hillclimbing(t):
+    while t!= 0:
+        boardn,board = makeboard()
+        print boardn
+        boardn = fixallcollisions(boardn,board)
+        print "after:"
+        print boardn
+        h = 0
+        h = getH(boardn)
+        print 'heuristic = ',h
+        t = t-1
+
+timestorepeat = 10
+hillclimbing(timestorepeat)
+
